@@ -99,14 +99,21 @@
 
 div.leftbit{
     float: left;
-    width: 70%;
+    width: 60%;
 	vertical-align: top;
 }
 
 div.rightbit{
     float: right;
+	text-align: left;
+    width: 35%;
+    padding: 10px;
+}
+
+div.thingright{
+    float: right;
 	text-align: right;
-    width: 160px;
+    width: 30%;
 	vertical-align: middle;
 }
 
