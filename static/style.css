@@ -1,0 +1,125 @@
+	body {
+		font-family: sans-serif;
+		background-color: #FDFCF7;
+		background-image:url('');
+		width: 60%;
+    	margin-left: auto;
+    	margin-right: auto;
+		padding: 0;
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		letter-spacing: -1px;
+		text-shadow: #F5F5F5 0px 0px 5px;
+		line-height: 80%;
+	}
+
+	h1 {
+		font-size: 350%;
+		text-align: center;
+		letter-spacing: -3px;
+		font-weight:bold;
+		text-transform:capitalize;
+		line-height: 100%;
+	}
+
+	ul, li {
+		width: 100%;
+		list-style: none;
+	}
+
+	ul {
+		padding: 0px;
+		margin: 0px;
+	}
+
+	li {
+		padding: 10px;
+		margin: 10px 0px;
+
+		background: rgba(241, 240, 233, 0.75);
+
+		border: 2px solid rgba(241, 240, 233, 0.5);
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+
+		box-shadow: #F5F5F5 0px 0px 25px;
+		-webkit-box-shadow: #F5F5F5 0px 0px 25px;
+		-moz-box-shadow: #F5F5F5 0px 0px 25px;
+	}
+
+	li:hover {
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+	}
+
+	li:hover.complete {
+		background: rgba(177, 231, 152, 0.75);
+	}
+
+	li:hover.incomplete {
+		background: rgba(173, 216, 230, 0.75);
+	}
+
+	li:hover.private {
+		background: rgba(223, 86, 78, 0.75);
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a.summary {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		width: 23px;
+		height: 23px;
+		padding: 5px;
+		margin: 2px;
+		border-radius: 5px;
+		border: 2px solid rgba(241, 240, 233, 0.5);
+	}
+
+	a.summary:hover {
+		background: rgba(173, 216, 230, 0.75);
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+	}
+
+	a.complete {
+		background: rgba(177, 231, 152, 0.75);
+	}
+
+	a.incomplete {
+		background: rgba(241, 240, 233, 0.75);
+	}
+
+div.leftbit{
+    float: left;
+    width: 70%;
+	vertical-align: top;
+}
+
+div.rightbit{
+    float: right;
+	text-align: right;
+    width: 160px;
+	vertical-align: middle;
+}
+
+footer{
+    clear:both;
+    width: 100%;
+	margin: 0;
+}
+
+img {
+	border-radius: 5px;
+}
+
+p {
+	margin-top: 0;
+}

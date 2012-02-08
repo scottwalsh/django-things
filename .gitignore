@@ -1,0 +1,25 @@
+# django .gitignore
+
+*.pyc
+*.pyo
+*.swp
+*.un~
+*.db
+static_root/
+
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
+venv
+
+settings.py
+secret.key
+
+devnotes/

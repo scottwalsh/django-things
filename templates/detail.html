@@ -1,0 +1,26 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/style.css" />
+	<title>101 things in 1001 days</title>
+</head>
+<body>
+<h1>101 things in 1001 days</h1>
+	{% if thing.private %}
+		<li>Sorry, this is a private goal :(</li>
+	{% else %}
+       	<h2>{{ thing.name }}</h2>
+		<p>{{ thing.description }}</p>
+
+		{% if thing.complete %}
+			<p>Woohoo, this goal is complete! This goal was completed on {{ thing.complete_date }}</p>
+		{% endif %}
+
+		<h3>Notes</h3>
+		{% for note in note_list %}
+			<h4>{{ note.title }}</h4>
+			<p>{{ note.title }}</p>
+			<p>{{ note.pub_date|date:"l d F Y" }} </p>
+		{% empty %}
+			<p>There are no notes relating to this thing.</p>
+		{% endfor %}
+	{% endif %}
+</head>
