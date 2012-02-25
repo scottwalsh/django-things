@@ -117,10 +117,16 @@ div.thingright{
 	vertical-align: middle;
 }
 
+div#info {
+    min-height: 250px;
+}
+
 footer{
     clear:both;
     width: 100%;
 	margin: 0;
+	text-align: center;
+	padding: 5px;
 }
 
 img {

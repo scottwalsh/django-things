@@ -8,29 +8,31 @@
 </head>
 <body>
 	<h1>101 things in 1001 days</h1>
-	<a id="about"></a>
-	<h2>About</h2>
-    <div class="leftbit">
-        <p>
-	        {% for thing in thing_list %}
-		        {% if thing.complete %}
-			        <a href="#{{ thing.id }}" class="summary complete">{{ thing.id }} </a>
-		        {% else %}
-			        <a href="#{{ thing.id }}" class="summary incomplete">{{ thing.id }} </a>
-		        {% endif %}
-	        {% empty %}
-		        <p>No things are available.</p>
-	        {% endfor %}
-	        <a href="#about" class="summary incomplete">?</a>
-        </p>
-        <div id="box">
-	        <div id="bar" style="width:{{ complete_percentage }}%;"></div>
-        </div>
-	</div>
-	<div class="rightbit">
-		<p>{{ site.intro }}</p>
-		<p>The project started on {{ site.start_date|date:"d F Y" }} and runs to {{ site.end_date|date:"d F Y" }} meaning there's only {{ site.end_date|timeuntil }} left.</p> 
-		<p>Of the {{ thing_list|length }} things on the list, {{ thing_complete_list|length }} have been completed.</p>
+	<div id="info">
+	    <a id="about"></a>
+	    <h2>About</h2>
+        <div class="leftbit">
+            <p>
+	            {% for thing in thing_list %}
+		            {% if thing.complete %}
+			            <a href="#{{ thing.id }}" class="summary complete">{{ thing.id }} </a>
+		            {% else %}
+			            <a href="#{{ thing.id }}" class="summary incomplete">{{ thing.id }} </a>
+		            {% endif %}
+	            {% empty %}
+		            <p>No things are available.</p>
+	            {% endfor %}
+	            <a href="#about" class="summary incomplete">?</a>
+            </p>
+            <div id="box">
+	            <div id="bar" style="width:{{ complete_percentage }}%;"></div>
+            </div>
+	    </div>
+	    <div class="rightbit">
+		    <p>{{ site.intro }}</p>
+		    <p>The project started on {{ site.start_date|date:"d F Y" }} and runs to {{ site.end_date|date:"d F Y" }} meaning there's only {{ site.end_date|timeuntil }} left.</p> 
+		    <p>Of the {{ thing_list|length }} things on the list, {{ thing_complete_list|length }} have been completed.</p>
+	    </div>
 	</div>
 
 	<h2>Things</h2>
@@ -58,7 +60,5 @@
     {% endfor %}
     </ul>
 
-	<footer>
-        {% include "footer.html" %}
-	</footer>
+    {% include "footer.html" %}
 </body>

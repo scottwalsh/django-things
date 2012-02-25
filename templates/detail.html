@@ -3,7 +3,7 @@
 	<title>101 things in 1001 days</title>
 </head>
 <body>
-<h1>101 things in 1001 days</h1>
+    <h1>101 things in 1001 days</h1>
 	{% if thing.private %}
 		<li>Sorry, this goal is private.</li>
 	{% else %}
@@ -17,10 +17,12 @@
 		<h3>Notes</h3>
 		{% for note in note_list %}
 			<h4>{{ note.title }}</h4>
-			<p>{{ note.title }}</p>
 			<p>{{ note.pub_date|date:"l d F Y" }} </p>
+			<p>{{ note.body }}</p>
 		{% empty %}
 			<p>There are no notes relating to this thing.</p>
 		{% endfor %}
 	{% endif %}
-</head>
+	
+	{% include "footer.html" %}
+</body>
